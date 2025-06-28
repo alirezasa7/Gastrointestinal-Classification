@@ -119,4 +119,30 @@ https://osf.io/84e7f/
     ├── Conf_Kvasir.py
     └── Conf_Gastrovision.py             
 
+# Training 
+to train the model use the following command:
 
+python Train_Kvasir.py --bsz 32
+>                     --lr 1e-4
+>                     --niter 60
+>                     --data_dir data/data_loader_kvasir.py
+>                     --logpath "your_experiment_name"
+> ```
+
+python Train_Gastrovision.py --bsz 32
+>                     --lr 1e-4
+>                     --niter 60
+>                     --data_dir data/data_loader_Gastrovision.py
+>                     --logpath "your_experiment_name"
+> ```
+
+## Arguments
+
+- `--bsz`: Batch size for training.
+- `--lr`: Learning rate for the optimizer.
+- `--niter`: Number of training iterations (epochs).  
+- `--data_dir`: Directory where the dataset is located. 
+- `--logpath`: Directory to save the best model checkpoint.
+
+  ## Citation
+If you use this repository in your work, please cite the following paper:
