@@ -32,89 +32,91 @@ https://osf.io/84e7f/
 
 
                             
-    ../                      
-    ├── common/             
+    ../                                  
     ├── data/               
     |   ├── data_loader_kvasir.py
-    |   ├── Kermany/
     │   |   ├── train/
     │   |   │   ├── NORMAL
-    │   |   |   └── PNEUMONIA
+    │   |   |   └── Esophagitis
+    │   |   |   └── Polyps
+    │   |   |   └── Ulcerative Colitis
+    │   |   |   └── Dyed and Lifted Polyps
+    │   |   |   └── Dyed Resection Margins
     │   |   └── test/
-    │   |       ├── NORMAL
-    │   |       └── PNEUMONIA
-    |   ├── Cohen/
+    │   |   │   ├── NORMAL
+    │   |   |   └── Esophagitis
+    │   |   |   └── Polyps
+    │   |   |   └── Ulcerative Colitis
+    │   |   |   └── Dyed and Lifted Polyps
+    │   |   |   └── Dyed Resection Margins
+    |   ├── data_loader_Gastrovision.py
     │   │   ├── train/
-    │   │   │   ├── COVID19
-    │   │   │   ├── NORMAL
-    │   │   |   └── PNEUMONIA
+    │   │   │   ├── Accessory tools
+    │   │   │   └── Angiectasia
+    │   │   |   └── Barrett's esophagus
+    │   │   │   └── Blood in lumen
+    │   │   │   └── Cecum
+    │   │   │   └── Colon diverticula
+    │   │   │   └── Colon polyps
+    │   │   │   └── Colorectal cancer
+    │   │   |   └── Duodenal bulb
+    │   │   │   └── Dyed-lifted-polyps
+    │   │   │   └── Dyed-resection-margins
+    │   │   │   └── Erythema 
+    │   │   │   └── Esophageal varices
+    │   │   │   └── Esophagitis
+    │   │   |   └── Gastric polyps
+    │   │   │   └── Gastroesophageal junction normal z-line
+    │   │   │   └── Ileocecal valve
+    │   │   │   └── Mucosal inflammation large bowel 
+    │   │   │   └── Normal esophagus
+    │   │   │   └── Normal mucosa and vascular pattern in the large bowel
+    │   │   |   └── Normal stomach
+    │   │   │   └── Pylorus
+    │   │   │   └── Resected polyps, Resection margins
+    │   │   │   └── Retroflex rectum  
+    │   │   │   └── Small bowel terminal ileum 
+    │   │   │   └── Ulcer    
     │   │   └── test/
-    │   │       ├── COVID19
-    │   │       ├── NORMAL
-    │   │       └── PNEUMONIA
-    │   └── Chest_Xray_Masks_and_Labels/
-    │       ├── train/
-    │       │   ├── images
-    │       |   └── masks
-    │       └── test/
-    │           ├── images
-    │           └── masks
+    │   │   │   ├── Accessory tools
+    │   │   │   └── Angiectasia
+    │   │   |   └── Barrett's esophagus
+    │   │   │   └── Blood in lumen
+    │   │   │   └── Cecum
+    │   │   │   └── Colon diverticula
+    │   │   │   └── Colon polyps
+    │   │   │   └── Colorectal cancer
+    │   │   |   └── Duodenal bulb
+    │   │   │   └── Dyed-lifted-polyps
+    │   │   │   └── Dyed-resection-margins
+    │   │   │   └── Erythema 
+    │   │   │   └── Esophageal varices
+    │   │   │   └── Esophagitis
+    │   │   |   └── Gastric polyps
+    │   │   │   └── Gastroesophageal junction normal z-line
+    │   │   │   └── Ileocecal valve
+    │   │   │   └── Mucosal inflammation large bowel 
+    │   │   │   └── Normal esophagus
+    │   │   │   └── Normal mucosa and vascular pattern in the large bowel
+    │   │   |   └── Normal stomach
+    │   │   │   └── Pylorus
+    │   │   │   └── Resected polyps, Resection margins
+    │   │   │   └── Retroflex rectum  
+    │   │   │   └── Small bowel terminal ileum 
+    │   │   │   └── Ulcer
     ├── model/
-    |   ├── MSR.py
     |   ├── backbone_utils.py
+    |   ├── CBAM.py
+    |   └── CROSS_ATTENTION.py
     |   └── transformer.py
+    |   └── MSR.py
+    |   └── FocalLoss.py
     ├── README.md           
-    ├── train_Cohen.py
-    ├── train_Kermany.py
-    ├── train_seg.py
-    ├── test_Cohen.py
-    ├── test_Kermany.py
-    └── test_seg.py             
+    ├── Train_Kvasir.py
+    ├── Train_Gastrovision.py
+    ├── Grad_Kvasir.py
+    ├── Grad_Gastrovision.py
+    ├── Conf_Kvasir.py
+    └── Conf_Gastrovision.py             
 
-.../                      
-├── common/             
-├── data/               
-|   ├── data_loader_kvasir.py
-│   |   ├── train/
-│   |   │   ├── NORMAL
-│   |   |   └── Esophagitis
-│   |   |   └── Polyps
-│   |   |   └── Ulcerative Colitis
-│   |   |   └── Dyed and Lifted Polyps
-│   |   |   └── Dyed Resection Margins
 
-│   |   ├── test/
-│   |   │   ├── NORMAL
-│   |   |   └── Esophagitis
-│   |   |   └── Polyps
-│   |   |   └── Ulcerative Colitis
-│   |   |   └── Dyed and Lifted Polyps
-│   |   |   └── Dyed Resection Margins
-|   ├── Cohen/
-│   │   ├── train/
-│   │   │   ├── COVID19
-│   │   │   ├── NORMAL
-│   │   |   └── PNEUMONIA
-│   │   └── test/
-│   │       ├── COVID19
-│   │       ├── NORMAL
-│   │       └── PNEUMONIA
-│   └── Chest_Xray_Masks_and_Labels/
-│       ├── train/
-│       │   ├── images
-│       |   └── masks
-│       └── test/
-│           ├── images
-│           └── masks
-├── model/
-|   ├── MSR.py
-|   ├── backbone_utils.py
-|   └── transformer.py
-├── README.md           
-├── train_Cohen.py
-├── train_Kermany.py
-├── train_seg.py
-├── test_Cohen.py
-├── test_Kermany.py
-└── test_seg.py 
-'''
