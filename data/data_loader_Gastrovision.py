@@ -1,0 +1,61 @@
+
+import os
+import torch
+from torchvision import transforms, datasets
+from torch.utils.data import DataLoader
+
+def get_data_loader(data_dir, batch_size):
+    """
+    Returns train and test dataloaders with correct data augmentation for training.
+    """
+
+    # Data augmentation for training data
+    train_transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        #transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomRotation(degrees=15),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
+    ])
+
+    # Standard preprocessing for test data
+    test_transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
+    ])
+
+    # ✅ FIXED PATHS: no redundant joins
+    train_path = os.path.join(data_dir, "train")
+    test_path = os.path.join(data_dir, "test")
+
+    train_dataset = datasets.ImageFolder(root=train_path, transform=train_transform)
+    test_dataset = datasets.ImageFolder(root=test_path, transform=test_transform)
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=3)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=3)
+
+    return train_loader, test_loader
+
+
+def get_test_loader(data_dir, batch_size):
+    """
+    Returns a test dataloader separately.
+    """
+
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),  
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225])
+    ])
+
+    # ✅ FIXED PATH
+    test_path = os.path.join(data_dir, "test")
+    test_dataset = datasets.ImageFolder(root=test_path, transform=transform)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=3)
+
+    return test_loader
