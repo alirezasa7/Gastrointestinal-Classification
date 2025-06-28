@@ -31,6 +31,46 @@ https://datasets.simula.no/kvasir/
 https://osf.io/84e7f/
 
 
+                            
+    ../                      
+    ├── common/             
+    ├── data/               
+    |   ├── dataloader.py
+    |   ├── Kermany/
+    │   |   ├── train/
+    │   |   │   ├── NORMAL
+    │   |   |   └── PNEUMONIA
+    │   |   └── test/
+    │   |       ├── NORMAL
+    │   |       └── PNEUMONIA
+    |   ├── Cohen/
+    │   │   ├── train/
+    │   │   │   ├── COVID19
+    │   │   │   ├── NORMAL
+    │   │   |   └── PNEUMONIA
+    │   │   └── test/
+    │   │       ├── COVID19
+    │   │       ├── NORMAL
+    │   │       └── PNEUMONIA
+    │   └── Chest_Xray_Masks_and_Labels/
+    │       ├── train/
+    │       │   ├── images
+    │       |   └── masks
+    │       └── test/
+    │           ├── images
+    │           └── masks
+    ├── model/
+    |   ├── MSR.py
+    |   ├── backbone_utils.py
+    |   └── transformer.py
+    ├── README.md           
+    ├── train_Cohen.py
+    ├── train_Kermany.py
+    ├── train_seg.py
+    ├── test_Cohen.py
+    ├── test_Kermany.py
+    └── test_seg.py             
+
 .../                      
 ├── common/             
 ├── data/               
