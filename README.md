@@ -35,7 +35,7 @@ https://osf.io/84e7f/
     ../                      
     ├── common/             
     ├── data/               
-    |   ├── dataloader.py
+    |   ├── data_loader_kvasir.py
     |   ├── Kermany/
     │   |   ├── train/
     │   |   │   ├── NORMAL
