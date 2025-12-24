@@ -44,7 +44,7 @@ WCEBleedGen https://zenodo.org/records/10156571
                             
     ../                                  
     ├── data/               
-    |   ├── data_loader_kvasir-v1.py
+    |   ├── data_loader_kvasir_v1.py
     │   |   ├── train/
     │   |   │   ├── NORMAL
     │   |   |   └── Esophagitis
@@ -59,7 +59,7 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   |   |   └── Ulcerative Colitis
     │   |   |   └── Dyed and Lifted Polyps
     │   |   |   └── Dyed Resection Margins
-    |   ├── data_loader_kvasir-v2.py
+    |   ├── data_loader_kvasir_v2.py
     │   |   └── test/
     │   |   │   ├── NORMAL
     │   |   |   └── Esophagitis
@@ -69,19 +69,84 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   |   |   └── Dyed Resection Margins
     |   ├── data_loader_Kvasir_Capsule.py
     │   |   ├── train/
-    │   |   │   ├── NORMAL
-    │   |   |   └── Esophagitis
-    │   |   |   └── Polyps
-    │   |   |   └── Ulcerative Colitis
-    │   |   |   └── Dyed and Lifted Polyps
-    │   |   |   └── Dyed Resection Margins
+    │   |   │   ├── Ampulla of vater
+    │   |   |   └── Angiectasia
+    │   |   |   └── Blood - fresh
+    │   |   |   └── Blood - hematin
+    │   |   |   └── Erosion
+    │   |   |   └── Erythema
+    │   |   |   └── Foreign body
+    │   |   |   └── Ileocecal valve
+    │   |   |   └── Lymphangiectasia
+    │   |   |   └── Normal clean mucosa
+    │   |   |   └── Polyp
+    │   |   |   └── Pylorus
+    │   |   |   └── Reduced mucosal view
+    │   |   |   └── Ulcer
     │   |   └── test/
-    │   |   │   ├── NORMAL
-    │   |   |   └── Esophagitis
-    │   |   |   └── Polyps
-    │   |   |   └── Ulcerative Colitis
-    │   |   |   └── Dyed and Lifted Polyps
-    │   |   |   └── Dyed Resection Margins
+    │   |   │   ├── Ampulla of vater
+    │   |   |   └── Angiectasia
+    │   |   |   └── Blood - fresh
+    │   |   |   └── Blood - hematin
+    │   |   |   └── Erosion
+    │   |   |   └── Erythema
+    │   |   |   └── Foreign body
+    │   |   |   └── Ileocecal valve
+    │   |   |   └── Lymphangiectasia
+    │   |   |   └── Normal clean mucosa
+    │   |   |   └── Polyp
+    │   |   |   └── Pylorus
+    │   |   |   └── Reduced mucosal view
+    │   |   |   └── Ulcer
+    |   ├── data_loader_Hyper_Kvasir.py
+    │   |   ├── train/
+    │   |   │   ├── barretts
+    │   |   |   └── barretts-short-segment
+    │   |   |   └── bbps-0-1
+    │   |   |   └── bbps-2-3
+    │   |   |   └── cecum
+    │   |   |   └── dyed-lifted-polyps
+    │   |   |   └── dyed-resection-margins
+    │   |   |   └── esophagitis-a
+    │   |   |   └── esophagitis-b-d
+    │   |   |   └── hemorrhoids
+    │   |   |   └── ileum
+    │   |   |   └── impacted-stool
+    │   |   |   └── polyps
+    │   |   |   └── pylorus
+    │   |   |   └── retroflex-rectum
+    │   |   |   └── retroflex-stomach
+    │   |   |   └── ulcerative-colitis-grade-0-1
+    │   |   |   └── ulcerative-colitis-grade-1
+    │   |   |   └── ulcerative-colitis-grade-1-2
+    │   |   |   └── ulcerative-colitis-grade-2
+    │   |   |   └── ulcerative-colitis-grade-2-3
+    │   |   |   └── ulcerative-colitis-grade-3
+    │   |   |   └── z-line
+    │   |   └── test/
+    │   |   │   ├── barretts
+    │   |   |   └── barretts-short-segment
+    │   |   |   └── bbps-0-1
+    │   |   |   └── bbps-2-3
+    │   |   |   └── cecum
+    │   |   |   └── dyed-lifted-polyps
+    │   |   |   └── dyed-resection-margins
+    │   |   |   └── esophagitis-a
+    │   |   |   └── esophagitis-b-d
+    │   |   |   └── hemorrhoids
+    │   |   |   └── ileum
+    │   |   |   └── impacted-stool
+    │   |   |   └── polyps
+    │   |   |   └── pylorus
+    │   |   |   └── retroflex-rectum
+    │   |   |   └── retroflex-stomach
+    │   |   |   └── ulcerative-colitis-grade-0-1
+    │   |   |   └── ulcerative-colitis-grade-1
+    │   |   |   └── ulcerative-colitis-grade-1-2
+    │   |   |   └── ulcerative-colitis-grade-2
+    │   |   |   └── ulcerative-colitis-grade-2-3
+    │   |   |   └── ulcerative-colitis-grade-3
+    │   |   |   └── z-line
     |   ├── data_loader_Gastrovision.py
     │   │   ├── train/
     │   │   │   ├── Accessory tools
@@ -137,6 +202,13 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   │   │   └── Retroflex rectum  
     │   │   │   └── Small bowel terminal ileum 
     │   │   │   └── Ulcer
+    |   ├── data_loader_kvasir_v1.py
+    │   |   ├── train/
+    │   |   │   ├── bleeding
+    │   |   |   └── non-bleeding
+    │   |   └── test/
+    │   |   │   ├── bleeding
+    │   |   |   └── non-bleeding
     ├── model/
     |   ├── backbone_utils.py
     |   ├── CBAM.py
