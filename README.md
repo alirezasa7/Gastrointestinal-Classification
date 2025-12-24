@@ -3,7 +3,8 @@ This is the implementation of the paper "A Lightweight Multi-Scale Refinement Ne
 
 The paper of this code is published in "expert-systems-with-applications"
 
-[![arXiv](https://img.shields.io/badge/arXiv-2409.11316-b31b1b.svg)](https://www.sciencedirect.com/journal/expert-systems-with-applications)
+[![Expert Systems with Applications](https://img.shields.io/badge/Journal-Expert%20Systems%20with%20Applications-ff69b4)](https://www.sciencedirect.com/journal/expert-systems-with-applications)
+
 
 
 ![architecture-6](https://github.com/user-attachments/assets/523434e3-a66b-44d7-a6f1-b8f5c02cb248)
