@@ -59,14 +59,6 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   |   |   └── Ulcerative Colitis
     │   |   |   └── Dyed and Lifted Polyps
     │   |   |   └── Dyed Resection Margins
-    |   ├── data_loader_kvasir_v2.py
-    │   |   └── test/
-    │   |   │   ├── NORMAL
-    │   |   |   └── Esophagitis
-    │   |   |   └── Polyps
-    │   |   |   └── Ulcerative Colitis
-    │   |   |   └── Dyed and Lifted Polyps
-    │   |   |   └── Dyed Resection Margins
     |   ├── data_loader_Kvasir_Capsule.py
     │   |   ├── train/
     │   |   │   ├── Ampulla of vater
