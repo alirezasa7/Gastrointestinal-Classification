@@ -208,9 +208,9 @@ WCEBleedGen https://zenodo.org/records/10156571
     |   └── transformer.py
     |   └── MSR.py
     |   └── FocalLoss.py
-    ├── README.md           
-    ├── Train_Kvasir.py
-    ├── Train_Gastrovision.py
+    ├── README.md  
+    ├── dataloader_selection.py
+    ├── Train.py
     ├── Grad_Kvasir.py
     ├── Grad_Gastrovision.py
     ├── Conf_Kvasir.py
@@ -219,19 +219,16 @@ WCEBleedGen https://zenodo.org/records/10156571
 # Training 
 to train the model use the following command:
 
-python Train_Kvasir.py --bsz 32
->                     --lr 1e-4
->                     --niter 60
->                     --data_dir data/data_loader_kvasir.py
->                     --logpath "your_experiment_name"
+python Train.py --bsz 32
+>               --lr 1e-4
+>               --niter 60
+>               --dataset "name_of_the_selected_dataset"
+>               --num_classes "class_numbers_of_the_selected_dataset"
+>               --data_dir "your_dataset_directory"
+>               --logpath "your_experiment_name"
 > ```
 
-python Train_Gastrovision.py --bsz 32
->                     --lr 1e-4
->                     --niter 60
->                     --data_dir data/data_loader_Gastrovision.py
->                     --logpath "your_experiment_name"
-> ```
+
 
 ## Arguments
 
