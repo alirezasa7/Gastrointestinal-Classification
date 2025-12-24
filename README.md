@@ -1,7 +1,6 @@
 # A Lightweight Multi-Scale Refinement Network for Gastrointestinal Disease Classification
 This is the implementation of the paper "A Lightweight Multi-Scale Refinement Network for Gastrointestinal Disease Classification"
 
-The paper of this code is published in "expert-systems-with-applications"
 
 [![Expert Systems with Applications](https://img.shields.io/badge/Journal-Expert%20Systems%20with%20Applications-ff69b4)](https://www.sciencedirect.com/journal/expert-systems-with-applications)
 
