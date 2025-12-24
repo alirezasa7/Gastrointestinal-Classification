@@ -54,6 +54,16 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   |   │   |   ├── NORMAL
     |   │   │   |   ├── ...
     │   |   |   |   └── Dyed Resection Margins
+    |   ├── data_loader_kvasir_v2.py
+    │   |   ├── kvasir_v2/
+    │   |   |   ├── train/
+    │   |   │   │   ├── NORMAL
+    |   │   │   │   ├── ...
+    │   |   |   │   └── Dyed Resection Margins
+    │   |   |   └── test/
+    │   |   │   |   ├── NORMAL
+    |   │   │   |   ├── ...
+    │   |   |   |   └── Dyed Resection Margins
     |   ├── data_loader_Kvasir_Capsule.py
     │   |   ├── Kvasir_Capsule/
     │   |   |   ├── train/
