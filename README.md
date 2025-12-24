@@ -229,6 +229,16 @@ python Train.py --bsz 32
 > ```
 
 
+# Testing 
+to test the model use the following command:
+python Test.py --bsz 32
+>               --dataset "name_of_the_selected_dataset"
+>               --num_classes "class_numbers_of_the_selected_dataset"
+>               --data_dir "your_dataset_directory"
+>               --weights "your_weights_directory"
+> ```
+
+
 
 ## Arguments
 
@@ -237,6 +247,7 @@ python Train.py --bsz 32
 - `--niter`: Number of training iterations (epochs).  
 - `--data_dir`: Directory where the dataset is located. 
 - `--logpath`: Directory to save the best model checkpoint.
+- `--weights`: Directory to use the best model checkpoint.
 
   ## Citation
 If you use this repository in your work, please cite the following paper:
