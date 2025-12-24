@@ -202,7 +202,7 @@ WCEBleedGen https://zenodo.org/records/10156571
     │   │   │   └── Retroflex rectum  
     │   │   │   └── Small bowel terminal ileum 
     │   │   │   └── Ulcer
-    |   ├── data_loader_kvasir_v1.py
+    |   ├── data_loader_WCEBleedGen.py
     │   |   ├── train/
     │   |   │   ├── bleeding
     │   |   |   └── non-bleeding
