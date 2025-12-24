@@ -226,7 +226,7 @@ python Train.py --bsz 32
 >               --num_classes "class_numbers_of_the_selected_dataset"
 >               --data_dir "your_dataset_directory"
 >               --logpath "your_experiment_name"
-> ```
+
 
 
 # Testing 
@@ -236,7 +236,7 @@ python Test.py --bsz 32
 >               --num_classes "class_numbers_of_the_selected_dataset"
 >               --data_dir "your_dataset_directory"
 >               --weights "your_weights_directory"
-> ```
+
 
 
 
