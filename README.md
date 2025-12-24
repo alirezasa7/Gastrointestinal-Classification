@@ -24,17 +24,50 @@ For more information, check out our paper on ()
 -timm version: 1.0.15
 
 # Datasets
-Two gastrointestinal datasets were used in this paper as follows:
+Six gastrointestinal datasets were used in this paper as follows:
 
-https://datasets.simula.no/kvasir/
+Kvasir-v1 :  https://datasets.simula.no/kvasir/
 
-https://osf.io/84e7f/
+GastroVision : https://datasets.simula.no/gastrovision/
+
+Kvasir-Capsule : https://datasets.simula.no/kvasir-capsule/
+
+Kvasir-v2 : https://datasets.simula.no/kvasir/
+
+ Hyper-Kvasir : https://datasets.simula.no/hyper-kvasir/
+
+WCEBleedGen https://zenodo.org/records/10156571
+
+
 
 
                             
     ../                                  
     ├── data/               
-    |   ├── data_loader_kvasir.py
+    |   ├── data_loader_kvasir-v1.py
+    │   |   ├── train/
+    │   |   │   ├── NORMAL
+    │   |   |   └── Esophagitis
+    │   |   |   └── Polyps
+    │   |   |   └── Ulcerative Colitis
+    │   |   |   └── Dyed and Lifted Polyps
+    │   |   |   └── Dyed Resection Margins
+    │   |   └── test/
+    │   |   │   ├── NORMAL
+    │   |   |   └── Esophagitis
+    │   |   |   └── Polyps
+    │   |   |   └── Ulcerative Colitis
+    │   |   |   └── Dyed and Lifted Polyps
+    │   |   |   └── Dyed Resection Margins
+    |   ├── data_loader_kvasir-v2.py
+    │   |   └── test/
+    │   |   │   ├── NORMAL
+    │   |   |   └── Esophagitis
+    │   |   |   └── Polyps
+    │   |   |   └── Ulcerative Colitis
+    │   |   |   └── Dyed and Lifted Polyps
+    │   |   |   └── Dyed Resection Margins
+    |   ├── data_loader_Kvasir_Capsule.py
     │   |   ├── train/
     │   |   │   ├── NORMAL
     │   |   |   └── Esophagitis
